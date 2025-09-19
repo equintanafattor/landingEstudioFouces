@@ -1,0 +1,27 @@
+/* src/input.css — Tailwind v4 */
+@import "tailwindcss";              /* incluye preflight + utilities */
+
+/* Definí tu tema en v4 (tokens = clases) */
+@theme {
+  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Ubuntu, "Cantarell", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Plus Jakarta Sans", Inter, ui-sans-serif;
+
+  /* Colores personalizados (v4 mapea --color-xxx -> bg-xxx, text-xxx, etc.) */
+  --color-fouces-teal: #0E8791;
+  --color-fouces-teal-dark: #095B62;
+  --color-fouces-sand: #F7F5F2;
+  --color-fouces-gold: #91681A;
+  --color-fouces-ink: #0F172A;
+
+  /* Sombra personalizada (v4 mapea --shadow-soft -> shadow-soft) */
+  --shadow-soft: 0 10px 25px -10px rgba(0,0,0,.18);
+}
+
+/* Tu base */
+@layer base {
+  h1, h2, h3, .font-display { font-family: var(--font-display); }
+  html { font-family: var(--font-sans); }
+}
+
+html { scroll-behavior: smooth; }
+

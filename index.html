@@ -2,53 +2,25 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Estudio Jurídico Fouces</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" href="img/logoChiquito.ico" type="image/x-icon">
+    <link rel="icon" href="img/logoChiquito.ico" type="image/x-icon" />
+
+    <!-- Performance para Google Fonts (opcional pero útil) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@600;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-    <!-- Config de Tailwind (CDN lee esta variable) -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Noto Sans", "Ubuntu", "Cantarell", "Helvetica Neue", "Arial", "sans-serif"],
-                        display: ["Plus Jakarta Sans", "Inter", "ui-sans-serif"]
-                    },
-                    colors: {
-                        fouces: {
-                            teal: "#0E8791",
-                            tealDark: "#095B62",
-                            sand: "#F7F5F2",
-                            gold: "#91681A",
-                            ink: "#0F172A"
-                        }
-                    },
-                    boxShadow: {
-                        soft: "0 10px 25px -10px rgba(0,0,0,.18)"
-                    }
-                }
-            }
-        }
-    </script>
-    <style type="text/tailwindcss">
-        @layer base {
-        h1,h2,h3,.font-display { font-family: "Plus Jakarta Sans", Inter, ui-sans-serif; }
-        html { font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Ubuntu, "Cantarell", "Helvetica Neue", Arial, sans-serif; }
-        }
-    </style>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
+    <!-- Font Awesome local -->
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+
+    <!-- Tu CSS compilado por Tailwind -->
+    <link rel="stylesheet" href="assets/css/output.css">
 </head>
+
 
 <body class="bg-fouces-sand text-fouces-ink font-sans">
     <!-- Header -->
