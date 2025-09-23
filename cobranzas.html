@@ -2,66 +2,23 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Estudio Jurídico Fouces</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="img/logoChiquito.ico" type="image/x-icon" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@600;800&display=swap"
         rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /> -->
-     <link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css"
-      integrity="sha256-wSv4Vh7X4zLGbVxASkYVn4uJ1mSNUjkqbi2Gv2oWjLI="
-      crossorigin="anonymous">
 
-    <link href="./output.css" rel="stylesheet">
+    <!-- Font Awesome local -->
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
 
-    <!-- Config de Tailwind (CDN lee esta variable) -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Noto Sans", "Ubuntu", "Cantarell", "Helvetica Neue", "Arial", "sans-serif"],
-                        display: ["Plus Jakarta Sans", "Inter", "ui-sans-serif"]
-                    },
-                    colors: {
-                        fouces: {
-                            teal: "#0E8791",
-                            tealDark: "#095B62",
-                            sand: "#F7F5F2",
-                            gold: "#91681A",
-                            ink: "#0F172A"
-                        }
-                    },
-                    boxShadow: {
-                        soft: "0 10px 25px -10px rgba(0,0,0,.18)"
-                    }
-                }
-            }
-        }
-    </script>
-    <style type="text/tailwindcss">
-        @layer base {
-        h1,h2,h3,.font-display { font-family: "Plus Jakarta Sans", Inter, ui-sans-serif; }
-        html { font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Ubuntu, "Cantarell", "Helvetica Neue", Arial, sans-serif; }
-        }
-    </style>
-    <style>
-        .carousel-item {
-            display: none;
-        }
-
-        .carousel-item.active {
-            display: block;
-        }
-    </style>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
+    <!-- Tailwind compilado (LOCAL) -->
+    <link rel="stylesheet" href="assets/css/output.css">
 </head>
 
 <body class="bg-fouces-sand text-fouces-ink font-sans">
@@ -88,7 +45,7 @@
                     <a href="index.html"
                         class="text-sm font-medium text-slate-700 hover:text-fouces-teal transition">Asesoría</a>
                     <a href="cobranzas.html#contacto"
-                        class="inline-flex items-center gap-2 rounded-xl bg-fouces-teal px-4 py-2 text-white text-sm font-semibold shadow-soft hover:bg-fouces-tealDark transition">
+                        class="inline-flex items-center gap-2 rounded-xl bg-fouces-teal px-4 py-2 text-white text-sm font-semibold shadow-soft hover:bg-fouces-teal-dark transition">
                         <i class="fa-solid fa-paper-plane"></i> Contacto
                     </a>
                 </nav>
@@ -126,7 +83,7 @@
                 </p>
                 <div class="mt-6 flex flex-col sm:flex-row gap-3 sm:justify-start justify-center">
                     <a href="#contacto"
-                        class="inline-flex items-center justify-center gap-2 rounded-xl bg-fouces-teal px-5 py-3 text-white font-semibold shadow-soft hover:bg-fouces-tealDark transition">
+                        class="inline-flex items-center justify-center gap-2 rounded-xl bg-fouces-teal px-5 py-3 text-white font-semibold shadow-soft hover:bg-fouces-teal-dark transition">
                         <i class="fa-solid fa-phone"></i> Hablemos
                     </a>
                     <a href="#tengoDeuda"
@@ -137,14 +94,13 @@
             </div>
             <!-- Carousel simple -->
             <div class="relative rounded-3xl overflow-hidden shadow-soft bg-white">
-                <div class="aspect-[16/10]">
-                    <img src="img/abogadoFirmaHD.jpg" class="carousel-item active h-full w-full object-cover"
-                        alt="Firma de abogado" />
-                    <img src="img/call3.jpg" class="carousel-item h-full w-full object-cover"
-                        alt="Gestión telefónica" />
-                    <img src="img/apretonNegra.jpg" class="carousel-item h-full w-full object-cover"
-                        alt="Apretón de manos" />
+                <div class="aspect-[16/10] relative">
+                    <img src="img/abogadoFirmaHD.jpg" class="carousel-item h-full w-full object-cover absolute inset-0">
+                    <img src="img/call3.jpg" class="carousel-item h-full w-full object-cover absolute inset-0 hidden">
+                    <img src="img/apretonNegra.jpg"
+                        class="carousel-item h-full w-full object-cover absolute inset-0 hidden">
                 </div>
+
 
                 <button id="prevBtn"
                     class="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow hover:bg-white"
@@ -161,8 +117,8 @@
     </section>
 
     <!-- Nosotros -->
-    <section id="#nosotros" class="mt-20">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 ñg:px-8">
+    <section id="nosotros" class="mt-20">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <h2 class="text-center font-display text-3xl font-extrabold">
                 Nuestro compromiso
             </h2>
@@ -186,7 +142,7 @@
                         posibilidades.</p>
                 </article>
                 <article
-                    class="rounded-2xl border border-slate-200 bg-white p-6 shadpw-soft hover:shadow-lg transition">
+                    class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft hover:shadow-lg transition">
                     <h3 class="font-semibold">Nuestro objetivo</h3>
                     <hr class="my-3 border-fouces-gold/50">
                     <p class="text-slate-600">Mediar entre intereses de clientes y titulares de deuda para recuperar su
@@ -460,13 +416,12 @@
         let i = 0;
 
         function show(n) {
-            items.forEach((el, idx) => el.classList.toggle('active', idx === n));
+            items.forEach((el, idx) => el.classList.toggle('hidden', idx !== n));
         }
+        show(0);
 
         prev?.addEventListener('click', () => { i = (i - 1 + items.length) % items.length; show(i); });
         next?.addEventListener('click', () => { i = (i + 1) % items.length; show(i); });
-
-        // Rotación automática opcional (cada 5s)
         setInterval(() => { i = (i + 1) % items.length; show(i); }, 5000);
     </script>
 </body>
