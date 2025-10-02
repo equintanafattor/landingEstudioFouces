@@ -37,7 +37,7 @@
 
                 <!-- Nav -->
                 <nav class="hidden md:flex items-center gap-6 pr-3">
-                    <a href="cobranzas.html#nosotros"
+                    <a href="index.html#nosotros"
                         class="text-sm font-medium text-slate-700 hover:text-fouces-teal transition">Nosotros</a>
                     <a href="cobranzas.html#clientes"
                         class="text-sm font-medium text-slate-700 hover:text-fouces-teal transition">Clientes</a>
@@ -45,7 +45,7 @@
                         class="text-sm font-medium text-slate-700 hover:text-fouces-teal transition">Asesoría</a>
                     <a href="cobranzas.html"
                         class="text-sm font-medium text-slate-700 hover:text-fouces-teal transition">Cobranzas</a>
-                    <a href="cobranzas.html#contacto"
+                    <a href="index.html#contacto"
                         class="inline-flex items-center gap-2 rounded-xl bg-fouces-teal px-4 py-2 text-white text-sm font-semibold shadow-soft hover:bg-fouces-teal-dark transition">
                         <i class="fa-solid fa-paper-plane"></i> Contacto
                     </a>
@@ -63,7 +63,7 @@
                 <a href="index.html#clientes" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Clientes</a>
                 <a href="index.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Asesoría</a>
                 <a href="cobranzas.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Cobranzas</a>
-                <a href="cobranzas.html#contacto"
+                <a href="index.html#contacto"
                     class="block px-3 py-2 rounded-lg bg-fouces-teal text-white">Contacto</a>
             </div>
         </div>
@@ -501,6 +501,26 @@
             </a>
         </div>
     </footer>
+
+    <!-- Scripts: header, menú y carrusel -->
+    <script>
+        // Header: sombra/blur al hacer scroll
+        const siteHeader = document.getElementById('siteHeader');
+        window.addEventListener('scroll', () => {
+            const y = window.scrollY;
+            siteHeader.classList.toggle('shadow', y > 10);
+        });
+
+
+        // Menú móvil
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn?.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+
 </body>
 
 </html>
