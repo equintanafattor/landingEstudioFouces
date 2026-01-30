@@ -63,8 +63,7 @@
                 <a href="index.html#clientes" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Clientes</a>
                 <a href="index.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Asesoría</a>
                 <a href="cobranzas.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Cobranzas</a>
-                <a href="index.html#contacto"
-                    class="block px-3 py-2 rounded-lg bg-fouces-teal text-white">Contacto</a>
+                <a href="index.html#contacto" class="block px-3 py-2 rounded-lg bg-fouces-teal text-white">Contacto</a>
             </div>
         </div>
     </header>
@@ -333,69 +332,27 @@
     </section>
 
     <!--Novedades-->
-    <!-- <section id="novedades" class="max-w-7xl mx-auto px-6 py-16"
-        style="scroll-margin-top: calc(var(--header-h) + 12px);">
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"> -->
-    <!-- Post 1 -->
-    <!-- <article class="bg-white rounded-xl shadow-soft overflow-hidden">
-                <div class="p-6">
-                    <div class="flex items-center gap-2 text-xs text-slate-500 mb-2">
-                        <time datetime="2025-09-10">10 Sep 2025</time>
-                        <span>•</span>
-                        <span
-                            class="inline-flex items-center px-2 py-0.5 rounded-full bg-fouces-teal/10 text-fouces-teal">Laboral</span>
-                    </div>
-                    <h3 class="text-lg font-semibold leading-snug">¿Qué hacer ante un despido?</h3>
-                    <p class="text-slate-700 mt-2 line-clamp-3">
-                        Plazos clave, documentación a guardar y primeros pasos para resguardar tus derechos.
-                    </p>
-                    <a href="blog/que-hacer-ante-un-despido.html"
-                        class="mt-4 inline-flex items-center gap-2 text-fouces-teal font-semibold hover:underline">
-                        Leer más <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-            </article> -->
+    <section id="novedades" class="max-w-7xl mx-auto px-6 py-12">
+        <div class="flex items-center justify-between mb-8">
+            <h2 class="text-2xl md:text-3xl font-bold font-display py-10">
+                Últimas novedades
+            </h2>
+            <a href="../blog/index.html"
+                class="hidden md:inline-flex items-center gap-2 text-fouces-teal font-semibold hover:underline">
+                Ver todas <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
 
-    <!-- Post 2 -->
-    <!-- <article class="bg-white rounded-xl shadow-soft overflow-hidden">
-                <div class="p-6">
-                    <div class="flex items-center gap-2 text-xs text-slate-500 mb-2">
-                        <time datetime="2025-08-25">25 Ago 2025</time>
-                        <span>•</span>
-                        <span
-                            class="inline-flex items-center px-2 py-0.5 rounded-full bg-fouces-teal/10 text-fouces-teal">Civil</span>
-                    </div>
-                    <h3 class="text-lg font-semibold leading-snug">Pasos para iniciar una sucesión</h3>
-                    <p class="text-slate-700 mt-2 line-clamp-3">
-                        Requisitos, tiempos habituales y documentación necesaria para comenzar el trámite.
-                    </p>
-                    <a href="blog/pasos-para-iniciar-una-sucesion.html"
-                        class="mt-4 inline-flex items-center gap-2 text-fouces-teal font-semibold hover:underline">
-                        Leer más <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-            </article> -->
+        <div id="home-posts" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
 
-    <!-- Post 3 -->
-    <!--  <article class="bg-white rounded-xl shadow-soft overflow-hidden">
-                <div class="p-6">
-                    <div class="flex items-center gap-2 text-xs text-slate-500 mb-2">
-                        <time datetime="2025-08-05">05 Ago 2025</time>
-                        <span>•</span>
-                        <span
-                            class="inline-flex items-center px-2 py-0.5 rounded-full bg-fouces-teal/10 text-fouces-teal">Empresas</span>
-                    </div>
-                    <h3 class="text-lg font-semibold leading-snug">Contrato de servicios: checklist básico</h3>
-                    <p class="text-slate-700 mt-2 line-clamp-3">
-                        Cláusulas esenciales para prevenir conflictos y proteger tu negocio.
-                    </p>
-                    <a href="blog/contrato-de-servicios-checklist.html"
-                        class="mt-4 inline-flex items-center gap-2 text-fouces-teal font-semibold hover:underline">
-                        Leer más <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-            </article>
-        </div> -->
+        <div class="mt-8 text-center md:hidden">
+            <a href="../blog/index.html"
+                class="inline-flex items-center gap-2 text-fouces-teal font-semibold hover:underline">
+                Ver todas <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
 
     <!-- CTA “Ver todas” en mobile -->
     <!-- <div class="mt-8 text-center md:hidden">
@@ -495,13 +452,14 @@
         <!-- Créditos del desarrollador -->
         <div class="text-center text-sm text-slate-500 pb-4">
             Desarrollado por
-            <a href="https://github.com/elemaa16" target="_blank"
+            <a href="https://github.com/equintanafattor" target="_blank"
                 class="inline-flex items-center gap-2 hover:text-fouces-teal font-medium">
                 <i class="fa-brands fa-github text-lg"></i>Emmanuel Quintana Fattor
             </a>
         </div>
     </footer>
 
+    <script src="blog/posts.js"></script>
     <!-- Scripts: header, menú y carrusel -->
     <script>
         // Header: sombra/blur al hacer scroll
@@ -518,6 +476,52 @@
         menuBtn?.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
+    </script>
+
+    <script>
+        const container = document.getElementById("home-posts");
+
+        if (container && window.BLOG_POSTS) {
+            const latest = [...window.BLOG_POSTS]
+                .sort((a, b) => new Date(b.date) - new Date(a.date))
+                .slice(0, 3);
+
+            latest.forEach(p => {
+                const art = document.createElement("article");
+                art.className = "bg-white rounded-xl shadow-soft overflow-hidden";
+
+                art.innerHTML = `
+        <a href="${p.url}" target="_blank" rel="noopener noreferrer">
+          <div class="aspect-[16/10] bg-slate-100">
+            <img src="${p.cover}" alt="${p.title}" class="w-full h-full object-cover">
+          </div>
+        </a>
+        <div class="p-6">
+          <div class="flex items-center gap-2 text-xs text-slate-500 mb-2">
+            <time>${new Date(p.date).toLocaleDateString("es-AR")}</time>
+            <span>•</span>
+            <span class="px-2 py-0.5 rounded-full bg-fouces-teal/10 text-fouces-teal">
+              ${p.category}
+            </span>
+          </div>
+          <h3 class="text-lg font-semibold leading-snug">
+            <a href="${p.url}" target="_blank" rel="noopener noreferrer">
+              ${p.title}
+            </a>
+          </h3>
+          <p class="text-slate-700 mt-2 line-clamp-3">
+            ${p.excerpt}
+          </p>
+          <a href="${p.url}" target="_blank" rel="noopener noreferrer"
+             class="mt-4 inline-flex items-center gap-2 text-fouces-teal font-semibold hover:underline">
+            Leer más <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      `;
+
+                container.appendChild(art);
+            });
+        }
     </script>
 
 
