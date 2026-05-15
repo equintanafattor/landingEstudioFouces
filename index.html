@@ -32,7 +32,6 @@
     </script>
 </head>
 
-
 <body class="bg-fouces-sand text-fouces-ink font-sans">
     <!-- Header -->
     <header id="siteHeader" class="fixed inset-x-0 top-0 z-50 transition-all">
@@ -469,6 +468,52 @@
             </a>
         </div>
     </footer>
+
+    <!-- Floating Contact -->
+    <div class="floating-contact">
+
+            <a href="https://wa.me/5493436110103?text=Hola,%20quisiera%20realizar%20una%20consulta."
+            target="_blank"
+            aria-label="WhatsApp"
+            class="group floating-contact-btn">
+
+            <span class="floating-contact-icon">
+                <i class="fa-brands fa-whatsapp text-3xl"></i>
+            </span>
+
+            <span class="floating-contact-label">WhatsApp</span>
+        </a>
+
+        <a href="tel:+5493434140610"
+            aria-label="Llamar"
+            class="group floating-contact-btn">
+
+            <span class="floating-contact-icon">
+                <i class="fa-solid fa-phone text-2xl"></i>
+            </span>
+
+            <span class="floating-contact-label">Llamar</span>
+        </a>
+
+    </div>
+
+    <script>
+        const floatingContact = document.querySelector('.floating-contact');
+
+        floatingContact.style.opacity = '0';
+        floatingContact.style.transform = 'translateY(20px)';
+        floatingContact.style.transition = 'all 0.4s ease';
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                floatingContact.style.opacity = '1';
+                floatingContact.style.transform = 'translateY(0)';
+            } else {
+                floatingContact.style.opacity = '0';
+                floatingContact.style.transform = 'translateY(20px)';
+            }
+        });
+    </script>
 
     <script src="blog/posts.js"></script>
     <!-- Scripts: header, menú y carrusel -->
