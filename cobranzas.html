@@ -357,14 +357,14 @@
                     class="rounded-3xl bg-white p-8 shadow-soft border border-slate-200 space-y-4" novalidate>
                     <div>
                         <label for="nombre" class="block text-sm font-medium text-slate-700">Nombre y Apellido</label>
-                        <input id="nombre" name="nombre" required
+                        <input id="nombre" name="nombre"
                             class="mt-1 w-full rounded-xl border-slate-300 focus:border-fouces-teal focus:ring-fouces-teal"
                             type="text" />
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                         <div class="sm:col-span-1">
                             <label for="dni" class="block text-sm font-medium text-slate-700">DNI</label>
-                            <input id="dni" name="dni" required
+                            <input id="dni" name="dni"
                                 class="mt-1 w-full rounded-xl border-slate-300 focus:border-fouces-teal focus:ring-fouces-teal"
                                 type="text" />
                         </div>
@@ -383,7 +383,7 @@
                     </div>
                     <div>
                         <label for="mensaje" class="block text-sm font-medium text-slate-700">Mensaje</label>
-                        <textarea id="mensaje" name="mensaje" rows="4" required
+                        <textarea id="mensaje" name="mensaje" rows="4"
                             class="mt-1 w-full rounded-xl border-slate-300 focus:border-fouces-teal focus:ring-fouces-teal"></textarea>
                     </div>
                     <input type="hidden" name="_subject" value="Nuevo contacto desde la web" />
@@ -516,5 +516,34 @@
         next?.addEventListener('click', () => { i = (i + 1) % items.length; show(i); });
         setInterval(() => { i = (i + 1) % items.length; show(i); }, 5000);
     </script>
+
+    <script>
+    const form = document.querySelector('form');
+    const email = document.getElementById('email');
+    const telefono = document.getElementById('telefono');
+
+    form.addEventListener('submit', (e) => {
+        const emailValido = email.value.trim() !== "" && email.checkValidity();
+        const telefonoValido = telefono.value.trim() !== "";
+
+        if (!emailValido || !telefonoValido) {
+            e.preventDefault();
+
+            if (!telefonoValido) {
+                telefono.classList.add('border-red-500');
+            } else {
+                telefono.classList.remove('border-red-500');
+            }
+
+            if (!emailValido) {
+                email.classList.add('border-red-500');
+            } else {
+                email.classList.remove('border-red-500');
+            }
+
+            alert('Por favor completá un teléfono y un email válido.');
+        }
+    });
+</script>
 </body>
 </html>
